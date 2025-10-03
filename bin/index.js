@@ -4,8 +4,12 @@ import { program } from "commander";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import ora from "ora";
+import figlet from "figlet";
 
 program.version("1.0.0").description("This is my test cli");
+console.log(
+    chalk.yellow(figlet.textSync("This is My First CLI".toUpperCase(), { horizontalLayout: "full" }))
+)
 
 program.action(() => {
     inquirer.prompt([
